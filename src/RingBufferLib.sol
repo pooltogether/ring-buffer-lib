@@ -86,6 +86,6 @@ library RingBufferLib {
     pure
     returns (uint256) 
     {
-        return wrap(_index == 0 ? _cardinality - 1 : _index - 1, _cardinality);
+        return _index == 0 ? _cardinality - 1 : _index - 1;
     }
 }
