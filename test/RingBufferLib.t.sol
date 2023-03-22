@@ -58,4 +58,12 @@ contract RingBufferLibTest is Test {
         assertEq(wrapper.nextIndex(2, 3), 0);
     }
 
+    function testPrevIndex_when_zero() public {
+        assertEq(wrapper.prevIndex(0, 3), 2);
+    }
+
+    function testPrevIndex_at_end() public {
+        assertEq(wrapper.prevIndex(2, 3), 1);
+    }
+
 }
